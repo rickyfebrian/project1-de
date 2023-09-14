@@ -52,8 +52,24 @@ for item in data_json:
             volume=item['volume'],
             issue=item['issue']
         ))
+    elif item['source'] == 'dvd':
+        list_magazine.append(Dvd(
+            title=item['title'],
+            subject=item['subject'],
+            upc=item['upc'],
+            actors=item['actors'],
+            director=item['directors'],
+            genre=item['genre']
+        ))
+    elif item['source'] == 'cd':
+        list_magazine.append(Cd(
+            title=item['title'],
+            subject=item['subject'],
+            upc=item['upc'],
+            artist=item['artist']
+        ))
 
-catalog_all = [list_book, list_magazine]
+catalog_all = [list_book, list_magazine, list_dvd, list_cd]
 
 input_search = 'test'
 result = Catalog(catalog_all).search(input_search)
@@ -61,6 +77,7 @@ result = Catalog(catalog_all).search(input_search)
 print('====| results |====')
 for index, result in enumerate(result):
     print(f'result ke-{index+1} | {result}')
+    
 #print(list_book)
 #print("\n")
 #print(list_magazine)

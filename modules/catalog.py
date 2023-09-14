@@ -18,6 +18,10 @@ class Catalog():
                         list_result.append(f'Title : (item.title), Type catatlog: Book')
                     elif type(item) == Magazine:
                         list_result.append(f'Title : (item.title), Type catatlog: Magazine')
+                    elif type(item) == Dvd:
+                        list_result.append(f'Title : (item.title), Type catatlog: Dvd')
+                    elif type(item) == Cd:
+                        list_result.append(f'Title : (item.title), Type catatlog: Cd')
                     else:
                         pass
                     
