@@ -71,7 +71,7 @@ for item in data_json:
 
 catalog_all = [list_book, list_magazine, list_dvd, list_cd]
 
-input_search = 'test'
+input_search = input("text to search: ")
 result = Catalog(catalog_all).search(input_search)
 
 print('====| results |====')
